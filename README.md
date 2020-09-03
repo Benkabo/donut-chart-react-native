@@ -1,3 +1,3 @@
 # donurt-chart-react-native
 
-![] (https://giphy.com/gifs/H4tZhyitc1nfWXduHP)
+[![Donut chart](/assets/Donut-animation.gif)]
