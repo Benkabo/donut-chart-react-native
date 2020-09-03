@@ -1,3 +1,3 @@
 # donurt-chart-react-native
 
-[![Donut chart](/assets/Donut-animation.gif)]
+![Donut chart](/assets/Donut-animation.gif)
