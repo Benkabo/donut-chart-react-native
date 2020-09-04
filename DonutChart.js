@@ -5,7 +5,6 @@ import Svg, { G, Circle } from "react-native-svg";
 const AnimatedCircle = Animated.createAnimatedComponent(Circle);
 const AnimatedInput = Animated.createAnimatedComponent(TextInput);
 
-
 export default function Donut({
   percentage = 75,
   radius = 40,
@@ -18,7 +17,7 @@ export default function Donut({
 }) {
   const animatedValue = React.useRef(new Animated.Value(0)).current;
   const circleRef = React.useRef();
-  const inputRef = React.useRef()
+  const inputRef = React.useRef();
   const halfCircle = radius + strokeWidth;
   const circleCircumference = 2 * Math.PI * radius;
   const animation = (toValue) => {
@@ -46,15 +45,15 @@ export default function Donut({
       }
 
       if (inputRef?.current) {
-          inputRef.current.setNativeProps({
-            text: `${Math.round(v.value)}`
-          })
+        inputRef.current.setNativeProps({
+          text: `${Math.round(v.value)}`,
+        });
       }
     });
 
     return () => {
-        animatedValue.removeAllListeners()
-    }
+      animatedValue.removeAllListeners();
+    };
   }, [max, percentage]);
   return (
     <View>
@@ -88,7 +87,7 @@ export default function Donut({
         </G>
       </Svg>
       <AnimatedInput
-      ref={inputRef}
+        ref={inputRef}
         underlineColorAndroid="transparent"
         editable={false}
         defaultValue="0"
